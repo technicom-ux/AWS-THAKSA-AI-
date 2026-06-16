@@ -323,12 +323,12 @@
                 เรียนรู้ AI & Cloud ผ่านแพลตฟอร์มมาตรฐานที่ออกแบบมาเพื่อคนไทยโดยเฉพาะ ช่วยให้ครูและเยาวชนทั่วประเทศเข้าศึกษาได้จากทุกที่ ทุกเวลา อย่างไม่มีข้อจำกัดทางภูมิศาสตร์
               </p>
             </div>
-            <div class="mt-8 pt-4 border-t border-gray-50 flex items-center justify-between text-xs font-semibold text-awsdeepblue group-hover:text-awsorange transition-colors">
+            <button onclick="openDetailsModal('accessibility')" class="mt-8 pt-4 border-t border-gray-50 flex items-center justify-between text-xs font-semibold text-awsdeepblue hover:text-awsorange group-hover:text-awsorange transition-colors w-full text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-awsorange rounded-lg">
               <span>เรียนรู้เพิ่มเติม</span>
               <svg class="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
               </svg>
-            </div>
+            </button>
           </div>
 
           <!-- Card 2 -->
@@ -347,12 +347,12 @@
                 มีพื้นที่และเครื่องมือจาก AWS ให้ทดลองสร้างนวัตกรรมอย่างไร้ขีดจำกัด ปลอดภัย ไร้กังวลเรื่องค่าใช้จ่าย เพื่อกระตุ้นความคิดสร้างสรรค์และทดลองใช้งานจริงในชีวิตประจำวัน
               </p>
             </div>
-            <div class="mt-8 pt-4 border-t border-gray-50 flex items-center justify-between text-xs font-semibold text-awsdeepblue group-hover:text-awsorange transition-colors">
+            <button onclick="openDetailsModal('sandbox')" class="mt-8 pt-4 border-t border-gray-50 flex items-center justify-between text-xs font-semibold text-awsdeepblue hover:text-awsorange group-hover:text-awsorange transition-colors w-full text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-awsorange rounded-lg">
               <span>เข้าสู่ Cloud Sandbox</span>
               <svg class="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
               </svg>
-            </div>
+            </button>
           </div>
 
           <!-- Card 3 -->
@@ -370,12 +370,12 @@
                 เตรียมความพร้อมเข้าสู่สายงานเทคโนโลยีชั้นนำ ที่มีอัตราค่าจ้างสูงและตลาดแรงงานทั่วโลกกำลังต้องการตัวสูงสุด เสริมความพร้อมให้เป็นทั้งผู้สร้างและผู้ใช้นวัตกรรมดิจิทัลแห่งศตวรรษ
               </p>
             </div>
-            <div class="mt-8 pt-4 border-t border-gray-50 flex items-center justify-between text-xs font-semibold text-awsdeepblue group-hover:text-awsorange transition-colors">
+            <button onclick="openDetailsModal('career')" class="mt-8 pt-4 border-t border-gray-50 flex items-center justify-between text-xs font-semibold text-awsdeepblue hover:text-awsorange group-hover:text-awsorange transition-colors w-full text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-awsorange rounded-lg">
               <span>แนวทางอาชีพ Tech</span>
               <svg class="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
               </svg>
-            </div>
+            </button>
           </div>
 
         </div>
@@ -558,6 +558,34 @@
     </div>
   </div>
 
+  <!-- ==================== HIGHLIGHT DETAILS MODAL ==================== -->
+  <div id="details-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-awsdarkblue/80 backdrop-blur-sm opacity-0 pointer-events-none transition-all duration-300" role="dialog" aria-modal="true" aria-labelledby="details-modal-title">
+    <div class="relative bg-white w-full max-w-lg rounded-3xl shadow-2xl border border-gray-100 overflow-hidden transform scale-95 transition-all duration-300" id="details-modal-container">
+      <button onclick="closeDetailsModal()" class="absolute top-5 right-5 text-gray-400 hover:text-awsdeepblue p-2 rounded-xl bg-gray-50 hover:bg-gray-100 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-awsorange" aria-label="ปิดกล่องข้อความ">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+
+      <div class="p-8 space-y-6">
+        <div class="border-b border-gray-100 pb-4">
+          <h3 class="text-xl font-black text-awsdeepblue" id="details-modal-title">หัวข้อรายละเอียด</h3>
+          <p class="text-xs text-awsorange font-bold mt-1" id="details-modal-subtitle">คำอธิบายย่อย</p>
+        </div>
+
+        <div class="space-y-4 text-sm text-gray-600 font-light leading-relaxed" id="details-modal-body">
+          <!-- Injected Content -->
+        </div>
+
+        <div class="pt-4 border-t border-gray-100 flex justify-end">
+          <button onclick="closeDetailsModal()" class="bg-awsdeepblue hover:bg-awsdarkblue text-white font-bold px-6 py-2.5 rounded-xl transition-colors text-xs focus:outline-none">
+            ตกลง, รับทราบ
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- ==================== SCROLL TO TOP BUTTON ==================== -->
   <button id="back-to-top" class="fixed bottom-6 right-6 z-40 bg-awsdeepblue hover:bg-awsdarkblue text-white p-3 rounded-full shadow-lg border border-white/10 opacity-0 pointer-events-none transition-all duration-300 focus:outline-none" aria-label="กลับสู่ด้านบน">
     <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
@@ -721,6 +749,129 @@
       }
     });
 
+
+    // ---------------- Highlight Details Modal Interactions ----------------
+    const detailsModal = document.getElementById('details-modal');
+    const detailsModalContainer = document.getElementById('details-modal-container');
+    const detailsTitle = document.getElementById('details-modal-title');
+    const detailsSubtitle = document.getElementById('details-modal-subtitle');
+    const detailsBody = document.getElementById('details-modal-body');
+
+    const detailsData = {
+      accessibility: {
+        title: "เข้าถึงง่าย ทั่วถึง",
+        subtitle: "เรียนรู้ AI & Cloud ผ่านแพลตฟอร์มมาตรฐานเพื่อคนไทย",
+        content: `
+          <p class="text-gray-600 leading-relaxed font-light">
+            โครงการมุ่งมั่นลดความเหลื่อมล้ำในการเข้าถึงเทคโนโลยีระดับโลก โดยการนำหลักสูตรจาก AWS Academy มาให้บริการในรูปแบบที่เข้าถึงง่ายสำหรับบุคลากรทางการศึกษาและนักเรียนไทย:
+          </p>
+          <ul class="space-y-3 pt-2">
+            <li class="flex gap-2.5 items-start">
+              <span class="p-1 bg-green-50 text-green-600 rounded-md text-xs font-bold shrink-0">✓</span>
+              <div>
+                <strong class="text-awsdeepblue text-sm block">บทเรียนภาษาไทยสมบูรณ์</strong>
+                <span class="text-xs text-gray-500">แปลและเรียบเรียงเนื้อหา รวมถึงคำอธิบายแบบทดสอบห้องปฏิบัติการคอมพิวเตอร์เป็นภาษาไทยทั้งหมด</span>
+              </div>
+            </li>
+            <li class="flex gap-2.5 items-start">
+              <span class="p-1 bg-green-50 text-green-600 rounded-md text-xs font-bold shrink-0">✓</span>
+              <div>
+                <strong class="text-awsdeepblue text-sm block">สถาปัตยกรรมคลาวด์แบบ Cross-Device</strong>
+                <span class="text-xs text-gray-500">รองรับการเข้าเรียนผ่านคอมพิวเตอร์ทั่วไป แท็บเล็ต หรือสมาร์ตโฟนที่มีอินเทอร์เน็ตความเร็วทั่วไปได้โดยไม่ต้องใช้คอมพิวเตอร์สเปกสูง</span>
+              </div>
+            </li>
+            <li class="flex gap-2.5 items-start">
+              <span class="p-1 bg-green-50 text-green-600 rounded-md text-xs font-bold shrink-0">✓</span>
+              <div>
+                <strong class="text-awsdeepblue text-sm block">ความร่วมมือระดับท้องถิ่น</strong>
+                <span class="text-xs text-gray-500">ขับเคลื่อนหลักสูตรการสอนร่วมกับ <strong>แผนกวิชาเทคโนโลยีคอมพิวเตอร์ วิทยาลัยเทคนิคตรัง</strong> และวิทยาลัยอาชีวศึกษาในพื้นที่ห่างไกล เพื่อขยายผลจริงสู่ชุมชน</span>
+              </div>
+            </li>
+          </ul>
+        `
+      },
+      sandbox: {
+        title: "ลงมือปฏิบัติจริง (Sandbox)",
+        subtitle: "ฝึกฝนทักษะจริงบนเครื่องมือ AWS ไร้ค่าใช้จ่ายและปลอดภัย",
+        content: `
+          <p class="text-gray-600 leading-relaxed font-light">
+            การเรียนรู้เทคโนโลยีที่ดีที่สุดคือการลงมือทำ โครงการจึงส่งมอบสภาพแวดล้อมจำลอง (Sandbox) มาตรฐานโลกให้แก่ครูและเยาวชน:
+          </p>
+          <ul class="space-y-3 pt-2">
+            <li class="flex gap-2.5 items-start">
+              <span class="p-1 bg-green-50 text-green-600 rounded-md text-xs font-bold shrink-0">✓</span>
+              <div>
+                <strong class="text-awsdeepblue text-sm block">AWS Free Credits</strong>
+                <span class="text-xs text-gray-500">บัญชีทดลองใช้จริงสำหรับการเปิดใช้งานบริการ AWS ต่างๆ เช่น EC2, S3, RDS และระบบ Generative AI โดยมีระบบบล็อกการคิดเงินอัตโนมัติ</span>
+              </div>
+            </li>
+            <li class="flex gap-2.5 items-start">
+              <span class="p-1 bg-green-50 text-green-600 rounded-md text-xs font-bold shrink-0">✓</span>
+              <div>
+                <strong class="text-awsdeepblue text-sm block">เรียนรู้ระบบจำลองจริง</strong>
+                <span class="text-xs text-gray-500">แล็บปฏิบัติการอ้างอิงสถานการณ์ทางธุรกิจจริง เช่น การสร้างฐานข้อมูลสำหรับเว็บขายของ หรือการออกแบบโมเดลทำนายข้อมูล</span>
+              </div>
+            </li>
+          </ul>
+        `
+      },
+      career: {
+        title: "ต่อยอดสู่อาชีพอนาคต",
+        subtitle: "เตรียมความพร้อมสายงาน IT / Cloud และ AI ระดับสากล",
+        content: `
+          <p class="text-gray-600 leading-relaxed font-light">
+            สร้างโอกาสให้เยาวชนไทยสามารถทำงานร่วมกับบริษัทชั้นนำทั้งในและต่างประเทศด้วยทักษะที่เป็นที่ต้องการสูงสุด:
+          </p>
+          <ul class="space-y-3 pt-2">
+            <li class="flex gap-2.5 items-start">
+              <span class="p-1 bg-green-50 text-green-600 rounded-md text-xs font-bold shrink-0">✓</span>
+              <div>
+                <strong class="text-awsdeepblue text-sm block">ปูทางสู่ AWS Certified Practitioner</strong>
+                <span class="text-xs text-gray-500">บทเรียนครอบคลุมขอบเขตเนื้อหาสำหรับการเตรียมสอบใบรับรองคุณภาพระดับสากลที่มีมูลค่าสูงในตลาดงาน</span>
+              </div>
+            </li>
+            <li class="flex gap-2.5 items-start">
+              <span class="p-1 bg-green-50 text-green-600 rounded-md text-xs font-bold shrink-0">✓</span>
+              <div>
+                <strong class="text-awsdeepblue text-sm block">สร้าง Portfolio โดดเด่น</strong>
+                <span class="text-xs text-gray-500">การสร้างโครงงานนวัตกรรมดิจิทัลจริง เพื่อยื่นสมัครงานหรือเป็นผลงานศึกษาต่อในระดับอุดมศึกษา</span>
+              </div>
+            </li>
+          </ul>
+        `
+      }
+    };
+
+    function openDetailsModal(key) {
+      const data = detailsData[key];
+      if (!data) return;
+
+      detailsTitle.innerText = data.title;
+      detailsSubtitle.innerText = data.subtitle;
+      detailsBody.innerHTML = data.content;
+
+      detailsModal.classList.remove('opacity-0', 'pointer-events-none');
+      detailsModalContainer.classList.remove('scale-95');
+      detailsModalContainer.classList.add('scale-100');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeDetailsModal() {
+      detailsModal.classList.add('opacity-0', 'pointer-events-none');
+      detailsModalContainer.classList.remove('scale-100');
+      detailsModalContainer.classList.add('scale-95');
+      document.body.style.overflow = '';
+    }
+
+    detailsModal.addEventListener('click', (e) => {
+      if (e.target === detailsModal) closeDetailsModal();
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && !detailsModal.classList.contains('pointer-events-none')) {
+        closeDetailsModal();
+      }
+    });
 
     // ---------------- Stats Counter Animation ----------------
     const counterElements = document.querySelectorAll('.counter');
