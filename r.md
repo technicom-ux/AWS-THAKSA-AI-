@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>การจัดอบรมระยะที่ 1 - AWS ThaksaAI</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Prompt', sans-serif; }
+    </style>
+</head>
+<body class="bg-slate-50 min-h-screen">
+
+    <nav class="bg-white/80 backdrop-blur-md sticky top-0 z-50 border-b border-slate-100">
+        <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+            <a href="index.html" class="text-xl font-bold text-slate-800 flex items-center gap-2">
+                <span class="text-amber-500">橙</span> AWS ThaksaAI
+            </a>
+            <a href="index.html" class="text-sm font-semibold text-slate-600 hover:text-amber-500 transition">← กลับหน้าแรก</a>
+        </div>
+    </nav>
+
+    <main class="max-w-4xl mx-auto px-6 py-12">
+        <div class="text-center mb-12">
+            <span class="text-amber-600 font-semibold bg-amber-50 px-3 py-1 rounded-full text-sm">รายละเอียดโครงการ</span>
+            <h1 class="text-4xl font-bold text-slate-900 mt-3">การจัดอบรมระยะที่ 1</h1>
+            <p class="text-slate-600 mt-3 text-lg">ยกระดับทักษะ Cloud Computing & Generative AI สู่ห้องเรียนไทย</p>
+        </div>
+
+        <div class="space-y-8">
+            <div class="bg-white rounded-2xl p-8 shadow-sm border border-slate-100">
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="p-2 bg-blue-50 text-blue-600 rounded-lg text-xl">👨‍🏫</span>
+                    <h2 class="text-2xl font-bold text-slate-800">สำหรับบุคลากรทางการศึกษา (Teachers)</h2>
+                </div>
+                <p class="text-slate-600 mb-6">มุ่งเน้นการใช้งาน AWS Cloud Essentials เพื่อการจัดการเรียนการสอนในยุคดิจิทัล และแนวทางการนำ Generative AI ไปประยุกต์ใช้ในการสร้างสื่อการสอน</p>
+                
+                <div class="border-t border-slate-100 pt-4 space-y-3 text-slate-600">
+                    <p>📅 <strong>วันที่จัดอบรม:</strong> [ระบุวันที่]</p>
+                    <p>📍 <strong>สถานที่ / รูปแบบ:</strong> [ระบุสถานที่ หรือ ออนไลน์ผ่าน Zoom/Meet]</p>
+                    <p>📝 <strong>กำหนดการสำคัญ:</strong> เปิดลงทะเบียนตั้งแต่วันที่ [ระบุวัน] เป็นต้นไป</p>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-2xl p-8 shadow-sm border border-slate-100">
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="p-2 bg-emerald-50 text-emerald-600 rounded-lg text-xl">🧑‍🎓</span>
+                    <h2 class="text-2xl font-bold text-slate-800">สำหรับนักเรียนและเยาวชน (Youth)</h2>
+                </div>
+                <p class="text-slate-600 mb-6">เรียนรู้พื้นฐาน AI Foundation และลงมือทดลองใช้งานจริงผ่านระบบ Cloud Sandbox เพื่อสร้างโครงงานหรือนวัตกรรมดิจิทัลเบื้องต้น</p>
+                
+                <div class="border-t border-slate-100 pt-4 space-y-3 text-slate-600">
+                    <p>📅 <strong>วันที่จัดอบรม:</strong> [ระบุวันที่]</p>
+                    <p>📍 <strong>สถานที่ / รูปแบบ:</strong> [ระบุสถานที่ หรือ ออนไลน์]</p>
+                    <p>📝 <strong>กำหนดการสำคัญ:</strong> [ระบุรายละเอียดเพิ่มเติม]</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="text-center py-8 text-sm text-slate-400 border-t border-slate-100 mt-12">
+        © 2026 AWS ThaksaAI. สงวนลิขสิทธิ์
+    </footer>
+
+</body>
+</html>
